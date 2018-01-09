@@ -4,4 +4,5 @@
 
 Repository for DART 450 course work
 
-* [Exercise 1 - Remembering HTML/CSS](https://laura-hdz.github.io/dart450/exercises/exercise01/)
+
+[Exercise 1 - Remembering HTML/CSS](https://laura-hdz.github.io/dart450/exercises/exercise01/)

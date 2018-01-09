@@ -20,7 +20,7 @@ html, body {
   display: flex;
   flex-wrap: column;
   justify-content: center;
-  background-color: rgb(32, 32, 32);
+  background-color: rgb(122, 255, 200);
 }
 
 #intro {
@@ -29,18 +29,18 @@ html, body {
 }
 
 #intro h1{
-  color:rgb(19, 213, 247);
+  color:rgb(70, 70, 70);
   font-family: 'Anton', serif;
   font-size: 60px;
   letter-spacing: 2px;
 }
 
 .letter {
-  color: rgb(122, 255, 200);
+  color: rgb(255, 55, 109);
 }
 
 #intro p {
-  color: rgb(145, 145, 145);
+  color: rgb(70, 70, 70);
   font-family: 'Playfair Display', sans-serif;
   font-size: 15px;
   transition: all .2s ease;
@@ -53,7 +53,7 @@ html, body {
 }
 
 #intro p:hover {
-  color: rgb(122, 255, 200);
+  color: rgb(255, 55, 109);
   font-size: 25px;
   padding-top:10px;
 }
@@ -72,9 +72,17 @@ html, body {
 }
 
 @keyframes bounce {
-  0% {left:0;}
+  0% {left:0; bottom:0%;}
+  10% {bottom:5%;}
+  20% {bottom:0;}
+  30% {bottom:5%;}
+  40% {bottom:0%;}
   47% {transform: scaleX(1);}
-  50% {left:85%; transform: scaleX(-1);}
+  50% {left:85%; bottom: 5%; transform: scaleX(-1);}
+  60% {bottom:0;}
+  70% {bottom:5%;}
+  80% {bottom:0;}
+  90% {bottom:5%;}
   97% {transform: scaleX(-1);}
-  100% {left:0;}
+  100% {left:0; bottom:0%;}
 }

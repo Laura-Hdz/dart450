@@ -1,4 +1,5 @@
 # dart450
-Laura Hernandez / Winter 2018
 
-_Repository for DART 450 course work_
+_Laura Hernandez / Winter 2018_
+
+Repository for DART 450 course work

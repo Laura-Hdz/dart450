@@ -1,10 +1,80 @@
 /*
 
-Title of project
-Author's name
+Exercise 01 (Jan 9)
+Laura Hernandez
 
-Some description of the CSS styling
+CSS for the first exercise of the semester.
 
 */
 
-/* Actual CSS goes below here! */
+@import url('https://fonts.googleapis.com/css?family=Anton|Playfair+Display');
+
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  display: flex;
+  flex-wrap: column;
+  justify-content: center;
+  background-color: rgb(32, 32, 32);
+}
+
+#intro {
+  margin:auto;
+  text-align: center;
+}
+
+#intro h1{
+  color:rgb(19, 213, 247);
+  font-family: 'Anton', serif;
+  font-size: 60px;
+  letter-spacing: 2px;
+}
+
+.letter {
+  color: rgb(122, 255, 200);
+}
+
+#intro p {
+  color: rgb(145, 145, 145);
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 15px;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+#intro a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#intro p:hover {
+  color: rgb(122, 255, 200);
+  font-size: 25px;
+  padding-top:10px;
+}
+
+#animation {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: bounce 8s linear infinite;
+}
+
+#animation img {
+  max-height:200px;
+}
+
+@keyframes bounce {
+  0% {left:0;}
+  47% {transform: scaleX(1);}
+  50% {left:85%; transform: scaleX(-1);}
+  97% {transform: scaleX(-1);}
+  100% {left:0;}
+}

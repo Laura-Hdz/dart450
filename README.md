@@ -1,6 +1,6 @@
-# DART 450 / Web Intervention
+# DART 450: Web Intervention
 
-## Laura Hernandez / Winter 2018
+### Laura Hernandez / Winter 2018
 
 Repository for DART 450 course work
 

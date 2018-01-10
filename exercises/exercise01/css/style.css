@@ -13,6 +13,7 @@ CSS for the first exercise of the semester.
   margin:0;
   padding: 0;
   box-sizing: border-box;
+  overflow:hidden;
 }
 
 html, body {
@@ -59,7 +60,7 @@ html, body {
 }
 
 #animation {
-  width: 200px;
+  width: 250px;
   height: 200px;
   position: absolute;
   bottom: 0;
@@ -72,6 +73,38 @@ html, body {
 }
 
 @keyframes bounce {
+  0% {left:0; bottom:0%;}
+  10% {bottom:5%;}
+  20% {bottom:0;}
+  30% {bottom:5%;}
+  40% {bottom:0%;}
+  47% {transform: scaleX(1);}
+  50% {left:85%; bottom: 5%; transform: scaleX(-1);}
+  60% {bottom:0;}
+  70% {bottom:5%;}
+  80% {bottom:0;}
+  90% {bottom:5%;}
+  97% {transform: scaleX(-1);}
+  100% {left:0; bottom:0%;}
+}
+
+@-webkit-@keyframes bounce {
+  0% {left:0; bottom:0%;}
+  10% {bottom:5%;}
+  20% {bottom:0;}
+  30% {bottom:5%;}
+  40% {bottom:0%;}
+  47% {transform: scaleX(1);}
+  50% {left:85%; bottom: 5%; transform: scaleX(-1);}
+  60% {bottom:0;}
+  70% {bottom:5%;}
+  80% {bottom:0;}
+  90% {bottom:5%;}
+  97% {transform: scaleX(-1);}
+  100% {left:0; bottom:0%;}
+}
+
+@-moz-@keyframes bounce {
   0% {left:0; bottom:0%;}
   10% {bottom:5%;}
   20% {bottom:0;}

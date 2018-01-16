@@ -95,19 +95,13 @@ $(document).ready(function () {
   //If we put the folowing into our script.js and look at the JavaScript Console we see
   //Uncaught TypeError: $(...).anamate is not a function
 
-  // $('#exampleButton').on('click',function () {
-  // $('.exampleClass').anamate({
-  //   fontSize: '+=1em'
-  // },1000);
-  // });
+  $('#exampleButton').on('click',function () {
+  $('.exampleClass').anamate({
+    fontSize: '+=1em'
+  },1000);
+  });
 
   // To check up and see where the error is go to javascript console on google chrome
   // once you click, it will show the error
-
-  $('#exampleButton').on('click',function () {
-    $('.exampleClass').animate({
-      fontSize: '+=1em'
-    },1000);
-  );
 
 });

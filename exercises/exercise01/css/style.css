@@ -64,7 +64,6 @@ html, body {
   width: 90%;
   height: 100%;
   position: absolute;
-  background-color: red;
 }
 
 #animation {
@@ -95,7 +94,7 @@ html, body {
   97% {transform: scaleX(-1);}
   100% {left:0; bottom:0%;}
 }
-/*
+
 @-webkit-@keyframes bounce {
   0% {left:0; bottom:0%;}
   10% {bottom:5%;}
@@ -103,7 +102,7 @@ html, body {
   30% {bottom:5%;}
   40% {bottom:0%;}
   47% {transform: scaleX(1);}
-  50% {left:85%; bottom: 5%; transform: scaleX(-1);}
+  50% {left:80%; bottom: 5%; transform: scaleX(-1);}
   60% {bottom:0;}
   70% {bottom:5%;}
   80% {bottom:0;}
@@ -119,11 +118,11 @@ html, body {
   30% {bottom:5%;}
   40% {bottom:0%;}
   47% {transform: scaleX(1);}
-  50% {left:85%; bottom: 5%; transform: scaleX(-1);}
+  50% {left:80%; bottom: 5%; transform: scaleX(-1);}
   60% {bottom:0;}
   70% {bottom:5%;}
   80% {bottom:0;}
   90% {bottom:5%;}
   97% {transform: scaleX(-1);}
   100% {left:0; bottom:0%;}
-} */
+}

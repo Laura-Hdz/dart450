@@ -1,0 +1,28 @@
+body {
+  margin: 20px;
+  font-family: Helvetica, sans-serif;
+}
+
+#exampleDiv {
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#exampleLabel,#exampleInput,#exampleButton {
+  font-size: 1.5em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+
+.exampleClass {
+  text-decoration: underline;
+}
+
+.red {
+  color: red;
+}
+
+.bold {
+  font-weight: bold;
+}

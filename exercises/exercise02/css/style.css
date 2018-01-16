@@ -1,0 +1,22 @@
+/*
+
+DART 450, Winter 2018
+Exercise 02 (Jan 16)
+Laura Hernandez
+
+CSS for the second exercise of the semester.
+
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Anton|Playfair+Display');
+
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow:hidden;
+}
+
+html, body {
+  height: 100%;
+}

@@ -60,13 +60,6 @@ html, body {
   padding-top:10px;
 }
 
-#container {
-  width: 90%;
-  height:300px;
-  bottom:0;
-  position: absolute;
-}
-
 #animation {
   width: 250px;
   height: 200px;

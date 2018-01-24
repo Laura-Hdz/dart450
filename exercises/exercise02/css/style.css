@@ -20,3 +20,114 @@ CSS for the second exercise of the semester.
 html, body {
   height: 100%;
 }
+
+#wrapper {
+  width: 100%;
+  height: 100%;
+  /* background-color: #450881; */
+  position: absolute;
+}
+
+#esports {
+  position: absolute;
+  top:50%;
+  left:50%;
+  margin: 0 auto;
+  width: 40%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+#esports p{
+  /* color:#fdf8cc; */
+  color:#a2a2a2;
+  font-family:'Playfair Display', serif;
+  font-size: 30px;
+}
+
+.colorType {
+  color:#fdf8cc;
+}
+
+#quote {
+  display: none;
+  position: absolute;
+  top:50%;
+  left:2%;
+  transform: translate(0%, -50%);
+}
+
+#quote p{
+  color:#fdf8cc;
+  font-family:'Anton', sans-serif;
+  font-size: 50px;
+}
+
+.click {
+  cursor: pointer;
+  color:#fd695f;
+}
+
+#source {
+  display: none;
+  position: absolute;
+  bottom:5%;
+  left:2%;
+  font-family:'Playfair Display', serif;
+  color:#fd695f;
+  cursor: pointer;
+}
+
+#source h2{
+  font-size: 25px;
+}
+
+#source p{
+  font-size: 15px;
+}
+
+#whyContainer {
+  display: none;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+#why {
+  display: none;
+  position: absolute;
+  top:50%;
+  left:50%;
+  margin: 0 auto;
+  width: 50%;
+  transform: translate(-50%, -50%);
+  color:#450881;
+}
+
+#why h1 {
+    font-family:'Anton', sans-serif;
+    font-size: 40px;
+}
+
+#why p {
+    font-family:'Playfair Display', serif;
+    font-size: 20px;
+    padding-top: 5px;
+}
+
+.whyClass {
+  background-color:#fdf8cc;
+}
+
+#reset {
+  display: none;
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-family:'Anton', sans-serif;
+  color:#450881;
+  cursor: pointer;
+}

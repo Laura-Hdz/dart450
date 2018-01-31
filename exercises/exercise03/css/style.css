@@ -1,0 +1,33 @@
+/*
+
+DART 450, Winter 2018
+Exercise 03
+Author
+
+Some description of the CSS styling
+
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+  margin:0;
+  padding: 0;
+}
+
+html, body {
+  background-color: #f44542;
+}
+
+.divs {
+  font-family: 'Roboto', sans-serif;
+  color: #d6ebd8;
+  font-size: 24px;
+  position: relative;
+  padding: 20px 30px 10px;
+}
+
+#fifth {
+  color: #3309db;
+  cursor: pointer;
+}

@@ -14,11 +14,6 @@ CSS for the second exercise of the semester.
   margin:0;
   padding: 0;
   box-sizing: border-box;
-  overflow:hidden;
-}
-
-html, body {
-  height: 100%;
 }
 
 #wrapper {

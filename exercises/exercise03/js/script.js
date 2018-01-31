@@ -67,23 +67,23 @@ $(document).ready(function () {
   setInterval(function () {
     $('body').append(document.getElementById( "fifth" ));
     setTimeout(function () {
-      $('body').append('sixth');
-    },2000);
-    setTimeout(function () {
-      $('body').append('seventh');
-    },4000);
-    setTimeout(function () {
-      $('body').append('eighth');
-    },6000);
-    setTimeout(function () {
-      $('body').append('ninth');
-    },8000);
-    setTimeout(function () {
-      $('body').append('tenth');
-    },10000);
-    setTimeout(function () {
-      $('body').append('eleventh');
-    },12000);
+    //   $('body').append('sixth');
+    // },2000);
+    // setTimeout(function () {
+    //   $('body').append('seventh');
+    // },4000);
+    // setTimeout(function () {
+    //   $('body').append('eighth');
+    // },6000);
+    // setTimeout(function () {
+    //   $('body').append('ninth');
+    // },8000);
+    // setTimeout(function () {
+    //   $('body').append('tenth');
+    // },10000);
+    // setTimeout(function () {
+    //   $('body').append('eleventh');
+    // },12000);
   },5000);
 
    },22000);

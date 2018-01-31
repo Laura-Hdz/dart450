@@ -13,9 +13,8 @@ $(document).ready(function () {
   $('.divs').hide();
   // Insert jQuery code here to run when the page is loaded
 
-
-  setTimeout(function () { 
-  $('#first').fadeIn();
+  setInterval(function () { 
+  $('#1').fadeIn();
    },1000);
 
   setTimeout(function () { 
@@ -58,5 +57,36 @@ $(document).ready(function () {
   $('#eleventh').fadeIn();
   },22000);
 
+  setInterval(function () {
+
+      setTimeout(function (){
+      $('#fifth').clone().appendTo('body');
+      }, 1000);
+
+      setTimeout(function (){
+      $('#sixth').clone().appendTo('body');
+      }, 3000);
+
+      setTimeout(function (){
+      $('#seventh').clone().appendTo('body');
+      }, 5000);
+
+      setTimeout(function (){
+      $('#eighth').clone().appendTo('body');
+      }, 7000);
+
+      setTimeout(function (){
+      $('#ninth').clone().appendTo('body');
+      }, 9000);
+
+      setTimeout(function (){
+      $('#tenth').clone().appendTo('body');
+      }, 11000);
+
+      setTimeout(function (){
+      $('#eleventh').clone().appendTo('body');
+      }, 13000);
+
+  },24000);
 
 });

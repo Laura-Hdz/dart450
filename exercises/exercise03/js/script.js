@@ -13,7 +13,6 @@ $(document).ready(function () {
   $('.divs').hide();
   // Insert jQuery code here to run when the page is loaded
 
-while (true) {
 
   setTimeout(function () { 
   $('#first').fadeIn();
@@ -59,6 +58,5 @@ while (true) {
   $('#eleventh').fadeIn();
   },22000);
 
-}
 
 });

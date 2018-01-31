@@ -13,16 +13,10 @@ $(document).ready(function () {
   $('.divs').hide();
   // Insert jQuery code here to run when the page is loaded
 
+while (true) {
+
   setTimeout(function () { 
   $('#first').fadeIn();
-
-  // setInterval(function () {
-  //   $('body').append('<div class="divs">Test!</div>');
-  //   setTimeout(function () {
-  //     $('body').append('<div class="divs">Test 2!</div>');
-  //   },2000);
-  // },4000);
-
    },1000);
 
   setTimeout(function () { 
@@ -63,32 +57,8 @@ $(document).ready(function () {
 
   setTimeout(function () { 
   $('#eleventh').fadeIn();
+  },22000);
 
-  setInterval(function () {
-    $('body').append(document.getElementById( "fifth" ));
-    setTimeout(function () {
-    //   $('body').append('sixth');
-    // },2000);
-    // setTimeout(function () {
-    //   $('body').append('seventh');
-    // },4000);
-    // setTimeout(function () {
-    //   $('body').append('eighth');
-    // },6000);
-    // setTimeout(function () {
-    //   $('body').append('ninth');
-    // },8000);
-    // setTimeout(function () {
-    //   $('body').append('tenth');
-    // },10000);
-    // setTimeout(function () {
-    //   $('body').append('eleventh');
-    // },12000);
-  },5000);
-
-   },22000);
-
-
-
+}
 
 });

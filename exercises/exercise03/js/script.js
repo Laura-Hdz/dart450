@@ -1,10 +1,10 @@
 /**********************************************
 
 DART 450, Winter 2018
-Title of Project
-Author
+Exercise 03
+Laura Hernandez
 
-Description of what the script does...
+Endless story that never actually gets anywhere
 
 **********************************************/
 

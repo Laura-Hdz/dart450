@@ -1,0 +1,21 @@
+/*
+
+DART 450, Winter 2018
+Week 05
+Laura Hernandez
+
+Week 05 lecture
+
+*/
+
+body {
+  margin: 0;
+}
+
+div {
+  width: 100px;
+  height: 100px;
+  background-color: grey;
+  margin: 5px;
+  display: inline-block;
+}

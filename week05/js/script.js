@@ -53,6 +53,8 @@ $(document).ready(function () {
 
 });
 
+/*
+
 // $(document).ready(function () {
 
 //The Grid example looped with jQuery; while loops happen all at once (all the divs will appear at the same time when the page loads)
@@ -125,3 +127,5 @@ $(document).ready(function () {
 // }
 //
 // });
+
+*/

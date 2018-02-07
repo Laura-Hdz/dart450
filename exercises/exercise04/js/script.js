@@ -1,15 +1,31 @@
 /**********************************************
 
 DART 450, Winter 2018
-Title of Project
-Author
+Exercise 04
+Laura Hernandez
 
-Description of what the script does...
+Bobbles everywhere.
 
 **********************************************/
 
 $(document).ready(function () {
 
   // Insert jQuery code here to run when the page is loaded
+
+  setInterval(function() {
+  $('img').each(function () {
+  var topPos = Math.random() * 650;
+  var leftPos = Math.random() * 650;
+  $(this).css({
+      position: 'absolute',
+      top: topPos,
+      left: leftPos
+      });
+  });
+},1000);
+
+  $('.bobble').on('click', function () {
+    location.reload();
+  });
 
 });

@@ -1,13 +1,22 @@
 /*
 
 DART 450, Winter 2018
-Title of project
-Author
+Exercise 04
+Laura Hernandez
 
-Some description of the CSS styling
+Bobbles everywhere.
 
 */
 
 body {
-  
+  overflow: hidden;
+  background-color: rgb(29, 240, 18);
+}
+
+button {
+font-family: fantasy;
+padding: 10px;
+margin: 30px;
+background-color: rgb(193, 9, 244);
+color: white;
 }

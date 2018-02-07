@@ -75,7 +75,7 @@ $(document).ready(function () {
   //   }
   // });
 
-  console.log(Math.random());
+  // console.log(Math.random());
   // $('div').each(function () {
   // var randomX = Math.random() * $(window).width();
   // var randomY = Math.random() * $(window).height();
@@ -94,14 +94,15 @@ $(document).ready(function () {
   //     top: randomY,
   //     left: randomX
   // });
+  //
   // });
 
-  var probability = Math.random();
-  if (probability < 0.1) {
-    $('body').text("You win!!!");
-  }
-  else {
-    $('body').text("You lose.");
-  }
+  // var probability = Math.random();
+  // if (probability < 0.1) {
+  //   $('body').text("You win!!!");
+  // }
+  // else {
+  //   $('body').text("You lose.");
+  // }
 
 });

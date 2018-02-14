@@ -7,7 +7,55 @@ Author
 Some description of the CSS styling
 
 */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 body {
-  
+  overflow: scroll;
+  font-family: 'Roboto', sans-serif;
+  color: rgb(0, 3, 255);
+}
+
+div {
+  max-width:95%;
+  position: relative;
+  left: 20px;
+  top: 20px;
+  padding-bottom: 50px;
+}
+
+p {
+  font-size: 40px;
+}
+
+input {
+  font-size: 20px;
+  border: .5;
+  width: 150px;
+  height: 25px;
+}
+
+#correct {
+  font-size: 50px;
+  padding: 20px;
+  color: rgb(112, 5, 170);
+  background-color: white;
+  position:fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#wrong {
+  font-size: 50px;
+  padding: 20px;
+  color: rgb(112, 5, 170);
+  background-color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.display {
+  display:block !important;
 }

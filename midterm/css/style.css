@@ -6,10 +6,98 @@ Laura Hernandez
 
 Online communication has become a big part of what the Internet is. And what better way to communicate than through Blobs!
 
-This CSS sets the styling and positioning for the background, chat and blobs.
+This CSS sets the styling and positioning for the background and blobs, as well as the typeface used.
 
 */
 
-body {
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
+* {
+  margin:0;
+  padding: 0;
+}
+
+html, body {
+  background-color: #202020;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: rgba(245, 245, 245, 1);
+}
+
+img {
+  width: 50px;
+  height: 50px;
+}
+
+#mainBlob {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+#startChatting {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: rgba(245, 245, 245, 0.54);
+  font-size: 20px;
+}
+
+.blobsHide {
+  display: none;
+}
+
+#hiBlob {
+  position: absolute;
+  width: 100px;
+  left: 40%;
+  transform: translate(-50%, 0);
+}
+
+#sadBlob {
+  position: absolute;
+  width: 100px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+#worriedBlob {
+  position: absolute;
+  width: 100px;
+  left: 60%;
+  transform: translate(-50%, 0);
+}
+
+#giftBlob {
+  position: absolute;
+  width: 100px;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, 0);
+}
+
+#winkBlob {
+  position: absolute;
+  width: 100px;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, 0);
+}
+
+#sadCloudBlob {
+  position: absolute;
+  width: 100px;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, 0);
+}
+
+#dizzyBlob {
+  position: absolute;
+  width: 100px;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, 0);
 }

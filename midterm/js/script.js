@@ -30,6 +30,7 @@ $(document).ready(function () {
     });
   });
 
+
   //Find out what the Blobs mean by hovering over them and appending their respective text
 
   $('#hiBlob').on('mouseover',function () {
@@ -44,16 +45,18 @@ $(document).ready(function () {
     $('#worriedBlob').append('oh god ');
   });
 
+
   //Decide where the conversation goes depending on which blob you click on
+
   $('#hiBlob').on('click', function () {
     document.getElementById('mainBlob').src='images/ablobgrin.gif';
     $('#hiBlob').fadeToggle();
     $('#sadBlob').fadeToggle();
     $('#worriedBlob').fadeToggle();
-      setInterval(function () { 
-        $('#giftBlob').fadeIn();
-        $('#winkBlob').fadeIn();
-       },1000);
+    setInterval(function () { 
+      $('#giftBlob').fadeIn();
+      $('#winkBlob').fadeIn();
+     },1000);
   });
 
   $('#sadBlob').on('click', function () {
@@ -61,17 +64,38 @@ $(document).ready(function () {
     $('#hiBlob').fadeToggle();
     $('#sadBlob').fadeToggle();
     $('#worriedBlob').fadeToggle();
-      setInterval(function () { 
-        $('#sadCloudBlob').fadeIn();
-        $('#dizzyBlob').fadeIn();
-       },1000);
+    setInterval(function () { 
+      $('#sadCloudBlob').fadeIn();
+      $('#dizzyBlob').fadeIn();
+     },1000);
   });
 
   $('#worriedBlob').on('click', function () {
-    document.getElementById('mainBlob').src='images/ablobnervous.gif';
+    document.getElementById('mainBlob').src='images/ablobeyes.gif';
     $('#hiBlob').fadeToggle();
     $('#sadBlob').fadeToggle();
     $('#worriedBlob').fadeToggle();
+    setInterval(function () { 
+      $('#worriedInput').fadeIn();
+      $('#worriedLabel').fadeIn();
+      $('#worriedButton').fadeIn();
+     },1000);
+  });
+
+  //Input why you're worried or not worried at all; a different blob will greet you depending on what you enter
+  var notWorried = "i'm not worried";
+  var neverWorried = "i never worry";
+
+  $('#cheerBlob').hide();
+  $('#bounceBlob').hide();
+
+  $('#worriedButton').on('click',function () {
+    if (worriedInput === notWorried) {
+     $('#cheerBlob').show();
+    }
+    else {
+      $('#bounceBlob').show();
+    }
   });
 
 });

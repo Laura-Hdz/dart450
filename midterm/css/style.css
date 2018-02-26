@@ -101,3 +101,40 @@ img {
   left: 55%;
   transform: translate(-50%, 0);
 }
+
+#worriedLabel {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#worriedInput {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#worriedButton {
+  position: absolute;
+  height:20px;
+  width: 65px;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#cheerBlob {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#bounceBlob {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

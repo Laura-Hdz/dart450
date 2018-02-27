@@ -22,11 +22,13 @@ html, body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   color: rgba(245, 245, 245, 1);
+  overflow: hidden;
 }
 
 img {
   width: 50px;
   height: 50px;
+  cursor: pointer;
 }
 
 #mainBlob {
@@ -34,15 +36,17 @@ img {
   top: 30%;
   left: 50%;
   transform: translate(-50%, 0);
+  cursor: none;
 }
 
 #startChatting {
   position: absolute;
-  top: 40%;
+  top: 5%;
   left: 50%;
   transform: translate(-50%, 0);
   color: rgba(245, 245, 245, 0.54);
-  font-size: 20px;
+  font-size: 14px;
+  cursor: pointer;
 }
 
 .blobsHide {
@@ -78,12 +82,30 @@ img {
   transform: translate(-50%, 0);
 }
 
+#giftDiv {
+  display: none;
+}
+
 #winkBlob {
   position: absolute;
   width: 100px;
   top: 50%;
   left: 55%;
   transform: translate(-50%, 0);
+}
+
+#winkDiv {
+  position: absolute;
+  width: 300px;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: none;
+}
+
+.winkClass {
+  text-align: center;
+  font-size: 40px;
 }
 
 #sadCloudBlob {
@@ -94,12 +116,29 @@ img {
   transform: translate(-50%, 0);
 }
 
+#river {
+  position: absolute;
+  width: 100%;
+  height:50%;
+  bottom:-50%;
+  background: linear-gradient(to right, rgba(127,225,250,1) 0%, rgba(2,79,161,1) 100%);
+}
+
 #dizzyBlob {
   position: absolute;
   width: 100px;
   top: 50%;
   left: 55%;
   transform: translate(-50%, 0);
+}
+
+#dizzyDiv {
+  width: 50%;
+  text-align: center;
+  position: absolute;
+  font-size: 30px;
+  top:20%;
+  left: -100%;
 }
 
 #worriedLabel {
@@ -135,6 +174,22 @@ img {
 #bounceBlob {
   position: absolute;
   top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#grimaceBlob {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#grimaceDiv {
+  text-align: center;
+  width: 200px;
+  position: absolute;
+  padding-top:50px;
   left: 50%;
   transform: translate(-50%, -50%);
 }

@@ -1,0 +1,7 @@
+#Midterm: The Blobs
+##Laura Hernandez
+###DART 450, Winter 2018
+
+Blob chat is an interactive chat where the conversation will take different turns depending on which Blob you talk to. Online communication has become a big part of what the Internet is and as someone who now spends way too much time interacting in different online communities, this aspect of the internet has largely shaped my online presence. When talking to people through the internet, getting feelings across through text is one of the biggest obstacles of proper communication, which is why I believe ‘emojis’, particularly animated ones, have grown exponentially. They allow users to portray feelings in a funny, through highly cringy way, making online communication particularly fun in my opinion. Blobs in particular, as someone who personally uses Discord to interact in the different online communities, have become a big part of my online persona. Blob chat addresses the concept of portraying emotions with minimal help from text through chatting, somewhat mockingly.
+
+Blob Chat uses the different concepts learned in class to lead to different situations depending on how the user interacts with the Blob. This can be through clicks, hovers or inputs which triggers an effect. This new effect can be movement, new blobs, text or strange interactions. This all represents the advantages, weirdness and humour of online communication with the growing presence of animated emojis.

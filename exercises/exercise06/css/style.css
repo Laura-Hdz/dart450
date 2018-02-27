@@ -1,0 +1,107 @@
+/*
+
+Blast.js Exercise
+Laura Hernandez
+Exercise 06
+
+blast.js exercise
+
+*/
+
+/* We have this here just to point out that EVERYTHING
+we run through .blast() ends up with this class. */
+
+@import url('https://fonts.googleapis.com/css?family=VT323');
+
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  font-family: 'VT323';
+}
+
+.button {
+  font-family: 'VT323';
+}
+
+#yourTotal {
+  position: fixed;
+  left: 10px;
+  top:10px;
+  font-size: 20px;
+}
+
+#part1 {
+  width: 60%;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+#part1 img {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.help {
+  width: 50px;
+  position: relative;
+  padding-top: 10px;
+  color: rgb(134,34,235);
+}
+
+#part2 {
+  display: none;
+  width: 60%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+#part2 img {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+#part3 {
+  display: none;
+  width: 60%;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  padding-bottom: 30px;
+  transform: translate(-50%, 0);
+}
+
+#part3 img {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+#reload {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  cursor: pointer;
+}
+
+.blasted {
+  color:rgb(225,4,159);
+}
+
+.correct {
+  color:rgb(225,4,159);
+}
+
+.wrong {
+  text-decoration: line-through;
+}

@@ -6,7 +6,7 @@ Laura Hernandez
 
 Online communication has become a big part of what the Internet is. And what better way to communicate than through Blobs!
 
-
+script.js uses the different concepts learned in class, such as fadeToggle, fadeIn, css, append, setInterval, etc. in order to create an interaction with the blobs. Decide where the conversation goes depending on how the interaction through the code happens.
 
 **********************************************/
 
@@ -14,7 +14,7 @@ $(document).ready(function () {
 // Insert jQuery code here to run when the page is loaded
 
   //Welcome window alert popup when page loads
-  // window.alert("Welcome to Blob chat! Enjoy your stay and Blob away!")
+  window.alert("Welcome to Blob chat! Enjoy your stay and Blob away!")
 
   //Start the chat by hiding the text by clicking on it and sending in the three blobs to start the convo
   $('#startChatting').on('click',function () {
@@ -145,6 +145,17 @@ $(document).ready(function () {
       $('#grimaceBlob').show();
       $('#grimaceBlob').append(grimaceDiv);
     }
+  });
+
+  //Download the license for the blobs
+  $("#source").on ('click', function(){
+  var link = $('#source').attr('href');
+  window.location.href = link;
+  });
+
+  //Reset the chat
+  $('#reload').on('click', function () {
+    location.reload();
   });
 
 });

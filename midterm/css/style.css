@@ -44,7 +44,7 @@ img {
   top: 5%;
   left: 50%;
   transform: translate(-50%, 0);
-  color: rgba(245, 245, 245, 0.54);
+  color: rgba(245, 245, 245, 0.7);
   font-size: 14px;
   cursor: pointer;
 }
@@ -192,4 +192,27 @@ img {
   padding-top:50px;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+#source {
+  position: absolute;
+  bottom: 10px;
+  left: 45%;
+  transform: translate(-50%, 0);
+}
+
+#source a{
+  text-decoration: none;
+  color: rgba(245, 245, 245, 0.54);
+  font-size: 14px;
+}
+
+#reload {
+  position: absolute;
+  bottom: 10px;
+  left: 55%;
+  transform: translate(-50%, 0);
+  cursor: pointer;
+  color: rgba(245, 245, 245, 0.54);
+  font-size: 14px;
 }

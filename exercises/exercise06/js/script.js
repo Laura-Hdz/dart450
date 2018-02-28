@@ -54,6 +54,8 @@ $(document).ready(function() {
       });
       $('#options2').animate({color:'rgba(56, 56, 56, 0.5)'},800);
       $('#part3').fadeIn();
+      total++;
+      $('#yourTotal').text(total + "/3");
     }
     else {
       $('#part2').blast({
@@ -79,6 +81,8 @@ $(document).ready(function() {
         customClass: 'correct'
       });
       $('#options3').animate({color:'rgba(56, 56, 56, 0.5)'},800);
+      total++;
+      $('#yourTotal').text(total + "/3");
     }
     else {
       $('#part3').blast({

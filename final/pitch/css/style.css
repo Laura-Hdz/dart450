@@ -1,0 +1,72 @@
+/*
+
+DART 450, Winter 2018
+Title of project
+Author
+
+Some description of the CSS styling
+
+*/
+
+@import url('https://fonts.googleapis.com/css?family=VT323');
+
+
+body {
+  background-color: rgb(108,255,213);
+}
+
+#icons {
+  display: inline-block;
+  padding: 10px;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#icons img{
+  width: 30px;
+  padding: 30px;
+}
+
+#lunch {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'VT323', monospace;
+  color: rgb(237,81,128);
+  font-size: 20px;
+}
+
+#yes {
+  font-family: 'VT323', monospace;
+  color: rgb(237,81,128);
+  font-size: 20px;
+}
+
+#no {
+  font-family: 'VT323', monospace;
+  color: rgb(237,81,128);
+  font-size: 20px;
+}
+
+#statush {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'VT323', monospace;
+  color: rgb(237,81,128);
+  font-size: 40px;
+}
+
+#status {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'VT323', monospace;
+  color: rgb(237,81,128);
+  font-size: 20px;
+}

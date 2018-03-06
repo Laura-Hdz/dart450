@@ -1,6 +1,6 @@
 ## Inspiration
 
-I was inspired by one of the hypothetical starting points presented on the course website: “Social media - one could imagine a webpage that extends on the idea of "social media" by extending it to a near-future vision of webpages/sites that serve as our friends in the absence of real world interactions with other humans.” This lead me to think about the known negative impacts of social media on our interpersonal relationships and the obsession with documenting and publicizing our lives online.
+I was inspired by one of the hypothetical starting points presented on the course website: *“Social media - one could imagine a webpage that extends on the idea of "social media" by extending it to a near-future vision of webpages/sites that serve as our friends in the absence of real world interactions with other humans.”* This lead me to think about the known negative impacts of social media on our interpersonal relationships and the obsession with documenting and publicizing our lives online.
 
 ## Some examples of the impacts
 

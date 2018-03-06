@@ -39,13 +39,12 @@ body {
   font-size: 20px;
 }
 
-#yes {
-  font-family: 'VT323', monospace;
-  color: rgb(237,81,128);
-  font-size: 20px;
-}
-
-#no {
+.answer {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-family: 'VT323', monospace;
   color: rgb(237,81,128);
   font-size: 20px;
@@ -65,6 +64,7 @@ body {
   position: absolute;
   top: 100%;
   left: 50%;
+  padding-bottom: 60px;
   transform: translate(-50%, -50%);
   font-family: 'VT323', monospace;
   color: rgb(237,81,128);

@@ -1,0 +1,45 @@
+/*
+
+DART 450, Winter 2018
+Title of project
+Author
+
+Some description of the CSS styling
+
+*/
+
+* {
+  margin:0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#bg img{
+  width: 100%;
+  z-index: -1;
+}
+
+#over {
+  background-color: rgba(78, 78, 78, 0.8);
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.answer {
+  font-family: sans-serif;
+  display: none;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}

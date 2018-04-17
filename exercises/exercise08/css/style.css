@@ -74,3 +74,10 @@ html, body {
   cursor: pointer;
   display: none;
 }
+
+.clear {
+  padding-left: 15px;
+  color: rgb(181, 5, 125);
+  display: none;
+  cursor: pointer;
+}

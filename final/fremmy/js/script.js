@@ -22,39 +22,6 @@ var geocodeURL = "https://maps.googleapis.com/maps/api/geocode/json";
 
 $(document).ready(function () {
 
-//GETTING YOUR LOCATION FOR LATER
-  //based on code shown in class
-  // Get user's location, call gotCoordinatesData when found...
-  navigator.geolocation.getCurrentPosition(gotCoordinatesData);
-  //function for LOCATION
-  // gotCoordinatesData (data)
-  function gotCoordinatesData (data) {
-    console.log("Got coordinates.");
-
-    //User's coordinates in a string
-    var coords = data.coords.latitude + ',' + data.coords.longitude;
-
-    // The result type we want is a street address
-    var resultType = 'street_address';
-
-    // Querying URL out of the base URL and extra parameters we're using and looking for
-    var url = geocodeURL + '?latlng=' + coords + '&result_type=' + resultType + '&key=' + geocodeAPIKey;
-
-    // Use getJSON to request geocoding data from Google
-    $.getJSON(url, gotGeocodeData);
-  };
-
-  // gotGeocodeData (data)
-  // Called by getJSON when Google has responded with geocoding data argument contains the geocoding data
-  function gotGeocodeData (data) {
-    console.log("Got geocoding data.");
-
-    // Pull out the user's formatted address (a string)
-    var address = data.results[0].formatted_address;
-    console.log(address);
-    localStorage.setItem('myAddress',address); // your
-  };
-
 //JS FOR THE WELCOME ("SIGN UP") PAGE
 
   //hiding the divs for the the initial questions
@@ -103,9 +70,9 @@ $(document).ready(function () {
     //Fremmy gives you two options: pizza or lasagna, and will answer according to what you pick once you click the button
     $('#foodButton').on('click',function() {
       //if you pick pizza
+      var mySavedFood = $('#foodInput').val(); // your food choice is saved in the myFood variable
+      localStorage.setItem('myFood',mySavedFood); // your food choice is saved to localStorage
       if ($('#foodInput').val() === 'pizza') {
-        var myFood = $('#foodInput').val(); // pizza choice is saved in the myFood variable
-        localStorage.setItem('mySavedFood',myFood); // your food choice is saved to localStorage
         //Fremy continues talking according to the text in fremmyTalks
         $('#fremmyTalks').text("I love Pizza!");
         say($('#fremmyTalks').text());
@@ -120,8 +87,6 @@ $(document).ready(function () {
       }
       //if you pick lasagna
       else if ($('#foodInput').val() === 'lasagna') {
-        var myFood = $('#foodInput').val(); // lasagna choice is saved in the myFood variable
-        localStorage.setItem('mySavedFood',myFood); // your food choice is saved to localStorage
         //Fremy continues talking according to the text in fremmyTalks
         $('#fremmyTalks').text("I love lasagna!");
         say($('#fremmyTalks').text());
@@ -181,31 +146,92 @@ $(document).ready(function () {
   var date = new Date();
   //how you feelin status - depending on what you answer, a new status will appear!
   function goodDay () {
+    // adding a class to the div so it shows
     $('#goodStatus').addClass("myStatus");
+    //adding the text to the div witht the Date
     $('#goodStatus').html(date + "<br/> Feeling good today!");
   }
   function badDay () {
+    // adding a class to the div so it shows
     $('#badStatus').addClass("myStatus");
+    //adding the text to the div witht the Date
     $('#badStatus').html(date + "<br/> Not feeling so hot today!");
   }
   function sadDay () {
+    // adding a class to the div so it shows
     $('#sadStatus').addClass("myStatus");
+    //adding the text to the div witht the Date
     $('#sadStatus').html(date + "<br/> What a day... don't feel like talking to anyone anymore");
   }
 
   //alright you want to talk about something else, you have 2 options.
   function talkElse () {
     $('#fremmyStatus').text("Okay, what do you want to talk about?");
+    say($('#fremmyStatus').text());
+    //append a div for the option to talk about where you are
     $('#fremmyStatus').append('<div id="where">Where I am</div>')
+    //append a div for the option to talk about food
     $('#fremmyStatus').append('<div id="eat">Probably food</div>')
   }
 
   function whereI () {
-    $('#fremmyStatus').text("You're in " + address + " right now. How do you like it?");
+    //depending on where you are, Fremmy will say something different
+    //GETTING YOUR LOCATION
+    console.log('Location sometimes takes a while, please be patient')
+    //based on code shown in class; calls getCurrentPosition
+    navigator.geolocation.getCurrentPosition(gotCoordinatesData);
+    //GETTING YOUR LOCATION
+      //based on code shown in class
+      //function for LOCATION
+      // gotCoordinatesData (data)
+      function gotCoordinatesData (data) {
+        console.log("Got coordinates.");
+
+        //User's coordinates in a string
+        var coords = data.coords.latitude + ',' + data.coords.longitude;
+
+        // The result type we want is a street address
+        var resultType = 'street_address';
+
+        // Querying URL out of the base URL and extra parameters we're using and looking for
+        var url = geocodeURL + '?latlng=' + coords + '&result_type=' + resultType + '&key=' + geocodeAPIKey;
+
+        // Use getJSON to request geocoding data from Google
+        $.getJSON(url, gotGeocodeData);
+      };
+
+      // gotGeocodeData (data)
+      // Called by getJSON when Google has responded with geocoding data argument contains the geocoding data
+      function gotGeocodeData (data) {
+        console.log("Got geocoding data.");
+
+        // Pull out the user's formatted address (a string)
+        var address = data.results[0].formatted_address;
+        console.log(address);
+
+        if (address.indexOf("Montreal") != -1) {
+          $('#fremmyStatus').text("Montreal is great isn't it?");
+          say($('#fremmyStatus').text());
+          $('#montreal').addClass("myStatus");
+          $('#montreal').html(date + "<br/> Currently in Montreal and it's great!");
+        }
+        else {
+          $('#fremmyStatus').text("Are you on vacation?");
+          say($('#fremmyStatus').text());
+          $('#away').addClass("myStatus");
+          $('#away').html(date + "<br/> Not exactly in Montreal right now. Let me know if you need me!");
+        }
+      };
   }
 
   function foodI () {
-    $('#fremmyStatus').text("You're in " + address + " right now. How do you like it?");
+    var myFood = localStorage.getItem('myFood');
+    console.log(myFood)
+    $('#fremmyStatus').text("You love " + myFood + ", why not order some right now?");
+    say($('#fremmyStatus').text());
+    window.open("https://www.pizzahut.ca/", "_blank");
+    $('#order').addClass("myStatus");
+    $('#order').html(date + "<br/> Ordering some food!");
   }
 
 

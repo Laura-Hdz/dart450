@@ -109,15 +109,14 @@ $(document).ready(function () {
         //Fremy continues talking according to the text in fremmyTalks
         $('#fremmyTalks').text("I love Pizza!");
         say($('#fremmyTalks').text());
-        // we hide the food question because we asked it
-        $('#foodStuff').hide();
-        //creating a new div to go to the dashboard
         $('#fremmyTalks').append('<div id="dashboard"></div>')
         $('#dashboard').text('Go to my Dash')
         //linking the new div to go to the dashboard
         $('#dashboard').on('click',function(){
           window.location.href = "html/dashboard.html";
         });
+        // we hide the food question because we asked it
+        $('#foodStuff').hide();
       }
       //if you pick lasagna
       else if ($('#foodInput').val() === 'lasagna') {
@@ -126,15 +125,14 @@ $(document).ready(function () {
         //Fremy continues talking according to the text in fremmyTalks
         $('#fremmyTalks').text("I love lasagna!");
         say($('#fremmyTalks').text());
-        // we hide the food question because we asked it
-        $('#foodStuff').hide();
-        //creating a new div to go to the dashboard
         $('#fremmyTalks').append('<div id="dashboard"></div>')
         $('#dashboard').text('Go to my Dash')
         //linking the new div to go to the dashboard
         $('#dashboard').on('click',function(){
           window.location.href = "html/dashboard.html";
         });
+        // we hide the food question because we asked it
+        $('#foodStuff').hide();
       }
       //you have to pick one of the two
       else

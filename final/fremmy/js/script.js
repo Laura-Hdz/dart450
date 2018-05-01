@@ -52,7 +52,7 @@ $(document).ready(function () {
     // Pull out the user's formatted address (a string)
     var address = data.results[0].formatted_address;
     console.log(address);
-    localStorage.setItem('myAddress',address); // your 
+    localStorage.setItem('myAddress',address); // your
   };
 
 //JS FOR THE WELCOME ("SIGN UP") PAGE
@@ -111,6 +111,13 @@ $(document).ready(function () {
         say($('#fremmyTalks').text());
         // we hide the food question because we asked it
         $('#foodStuff').hide();
+        //creating a new div to go to the dashboard
+        $('#fremmyTalks').append('<div id="dashboard"></div>')
+        $('#dashboard').text('Go to my Dash')
+        //linking the new div to go to the dashboard
+        $('#dashboard').on('click',function(){
+          window.location.href = "html/dashboard.html";
+        });
       }
       //if you pick lasagna
       else if ($('#foodInput').val() === 'lasagna') {
@@ -121,6 +128,12 @@ $(document).ready(function () {
         say($('#fremmyTalks').text());
         // we hide the food question because we asked it
         $('#foodStuff').hide();
+        //creating a new div to go to the dashboard
+        $('#fremmyTalks').append('<div id="dashboard"></div>')
+        $('#dashboard').text('Go to my Dash')
+        //linking the new div to go to the dashboard
+        $('#dashboard').on('click',function(){
+          window.location.href = "html/dashboard.html";
       }
       //you have to pick one of the two
       else

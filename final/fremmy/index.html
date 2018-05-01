@@ -1,10 +1,10 @@
 <!-- ************************************************************************
 
 DART 450, Winter 2018
-Title of project
-Author
+Fremmy / Final
+Laura Hernandez
 
-Description of project and purpose of HTML...
+html file for final
 
 ************************************************************************ -->
 
@@ -16,7 +16,7 @@ Description of project and purpose of HTML...
 
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-  <title>Title of project</title>
+  <title>Fremmy</title>
 
   <link rel="stylesheet" type="text/css" href="css/style.css" />
 
@@ -27,38 +27,51 @@ Description of project and purpose of HTML...
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
-  <!-- Script file -->
+  <!-- responsivevoice link -->
+  <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+
+  <!-- script file -->
   <script src="js/script.js"></script>
 
 </head>
 
-<!-- Comment about the body of the HTML -->
+<!-- Welcome page for Fremmy -->
 
 <body>
 
-<div id="landingPage">
-    <h1 id="greet">Hi! I'm Fremmy, nice to meet you. I'm sure you can't wait to interact with other users but I want to get to know you better.</h1>
-
-    <label id="questionName" for="answerName">What's your name?</label>
-    <input id="answerName"></input>
-    <button id="enterName">Enter</button>
-
-    <label id="questionName" for="answerFood">What's your favourite food?</label>
-    <input id="answerName"></input>
-    <button id="enterName">Enter</button>
-
-    <label id="questionName" for="answerName">What's your name?</label>
-    <input id="answerName"></input>
-    <button id="enterName">Enter</button>
-
-    <label id="questionName" for="answerName">What's your name?</label>
-    <input id="answerName"></input>
-    <button id="enterName">Enter</button>
-
-    <label id="questionName" for="answerName">What's your name?</label>
-    <input id="answerName"></input>
-    <button id="enterName">Enter</button>
+<div id="nav">
+    <a href="#"><img src="images/dashboard.svg" alt="dashboard"/></a>
+    <a href="#"><img src="images/profile.svg" alt="profile"/></a>
+    <a href="#"><img src="images/fremmies.svg" alt="fremmies"/></a>
+    <a href="#"><img src="images/message.svg" alt="message"/></a>
 </div>
+
+<div id="welcome">
+  <p id="sayingHi"><span class="headerText">Welcome!</span> I'm Fremmy and I'll make sure to take good care of you. Tell me a bit about you and I'll help you find plenty of people to talk to!</p>
+
+  <div id="nameStuff">
+    <label id="nameLabel" for="nameInput">What's your name?</label>
+    <input id="nameInput"></input>
+    <button id="nameButton">:)</button>
+  </div>
+
+  <p id="fremmyTalks"></p>
+
+  <div id="ageStuff">
+    <label id="ageLabel" for="ageInput">How old are you?</label>
+    <input id="ageInput"></input>
+    <button id="ageButton">:)</button>
+  </div>
+
+  <div id="foodStuff">
+    <label id="foodLabel" for="foodInput">Do you prefer pizza or lasagna?</label>
+    <input id="foodInput"></input>
+    <button id="foodButton">:)</button>
+  </div>
+
+
+</div>
+
 
 </body>
 

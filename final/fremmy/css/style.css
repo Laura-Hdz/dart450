@@ -1,12 +1,13 @@
 /*
 
 DART 450, Winter 2018
-Title of project
-Author
+Fremmy / Final
+Laura Hernandez
 
-Some description of the CSS styling
+css for final
 
 */
+
 
 @import url('https://fonts.googleapis.com/css?family=VT323');
 
@@ -20,4 +21,40 @@ html, body {
   height: 100%;
   overflow: hidden;
   font-family: 'VT323',monospace;
+}
+
+/* HOME TEST */
+#nav {
+  position: fixed;
+  top: 0;
+  width: 400px;
+  height: 60px;
+  left: 50%;
+  transform: translate(-50%,0);
+}
+
+#nav a {
+  float: left;
+  padding: 20px 40px;
+  width: 20px;
+  height: 20px;
+}
+
+#welcome {
+  position: absolute;
+  top: 40%;
+  width: 40%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%,0);
+}
+
+#welcome p{
+  padding-bottom: 15px;
+}
+
+.headerText {
+  font-size: 30px;
+  display:block;
+  padding-bottom: 10px;
 }

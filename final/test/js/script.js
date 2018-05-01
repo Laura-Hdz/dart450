@@ -24,8 +24,6 @@ $(document).ready(function () {
 
   // Fetching a saved name (if there is one)
   var myName = localStorage.getItem('myName');
-  // Fetching a saved food choice
-  var myFood = localStorage.getItem('myFood');
 
   // If statement to check if there's anything there for the name (null means there isn't anything)
   if (myName == null) {
@@ -38,10 +36,11 @@ $(document).ready(function () {
     say($('#nameLabel').text());
     // Inputting your name and clicking on the button will save it for when you come back
     $('#nameButton').on('click',function() {
-      var myName = $('#nameInput').val(); // your name is saved in the myName variable
-      localStorage.setItem('mySavedName',myName); // your name is saved to the browser
+      var mySavedName = $('#nameInput').val(); // your name is saved in the myName variable
+      localStorage.setItem('myName',mySavedName); // your name is saved to the browser
+      console.log(mySavedName);
     //Fremmy knows your name now, so it says hi after we set the text to the div "fremmyTalks"
-      $('#fremmyTalks').text("Hi " + myName + ", it's nice to meet you!");
+      $('#fremmyTalks').text("Hi " + mySavedName + ", it's nice to meet you!");
         say($('#fremmyTalks').text());
         //We hide divs "sayingHi" and "nameStuff" since it already said hi and already knows your name
         $('#sayingHi').hide();
@@ -92,10 +91,18 @@ $(document).ready(function () {
   //now we go back to what happens if you had already entered your name and all those questions
   else {
   // ELSE your name is already saved, so we can move on to the website since it doesn't need to ask questions
-  $('#sayingHi').text('Welcome back, ' + userName);
-  $('#goToDash').append('#sayingHi');
-  $('#goToDash').text('go to my dashboard');
+    $('#sayingHi').text('Welcome back, ' + myName);
+    //creating a new div to go to the dashboard
+    $('#sayingHi').append('<div id="dashboard"></div>')
+    $('#dashboard').text('Go to my Dash')
+    //linking the new div to go to the dashboard
+    $('#dashboard').on('click',function(){
+      window.location.href = "html/dashboard.html";
+    });
   }
+
+//JS FOR THE DASHBOARD PAGE
+
 
 
 });

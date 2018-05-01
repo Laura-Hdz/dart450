@@ -97,3 +97,7 @@ html, body {
   color: rgb(110, 107, 109);
   padding-top: 5px;
 }
+
+#where {
+  cursor: pointer;
+}

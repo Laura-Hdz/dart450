@@ -15,7 +15,45 @@ var voiceParameters = {
     volume: 0.5
 }
 
+//  Google API key for location to use later
+var geocodeAPIKey = "AIzaSyDxB9w9mK3NvTs8C35K5CAn9Rad_F_JMSI";
+// The base URL to give back JSON data about user's location
+var geocodeURL = "https://maps.googleapis.com/maps/api/geocode/json";
+
 $(document).ready(function () {
+
+//GETTING YOUR LOCATION FOR LATER
+  //based on code shown in class
+  // Get user's location, call gotCoordinatesData when found...
+  navigator.geolocation.getCurrentPosition(gotCoordinatesData);
+  //function for LOCATION
+  // gotCoordinatesData (data)
+  function gotCoordinatesData (data) {
+    console.log("Got coordinates.");
+
+    //User's coordinates in a string
+    var coords = data.coords.latitude + ',' + data.coords.longitude;
+
+    // The result type we want is a street address
+    var resultType = 'street_address';
+
+    // Querying URL out of the base URL and extra parameters we're using and looking for
+    var url = geocodeURL + '?latlng=' + coords + '&result_type=' + resultType + '&key=' + geocodeAPIKey;
+
+    // Use getJSON to request geocoding data from Google
+    $.getJSON(url, gotGeocodeData);
+  };
+
+  // gotGeocodeData (data)
+  // Called by getJSON when Google has responded with geocoding data argument contains the geocoding data
+  function gotGeocodeData (data) {
+    console.log("Got geocoding data.");
+
+    // Pull out the user's formatted address (a string)
+    var address = data.results[0].formatted_address;
+    console.log(address);
+    localStorage.setItem('myAddress',address); // your 
+  };
 
 //JS FOR THE WELCOME ("SIGN UP") PAGE
 
@@ -117,6 +155,9 @@ $(document).ready(function () {
       'good': goodDay,
       'bad': badDay,
       'not talking': sadDay,
+      'talk about something else': talkElse,
+      'where i am': whereI,
+      'food': foodI,
       };
     // adding the commands
     annyang.addCommands(commands);
@@ -124,9 +165,9 @@ $(document).ready(function () {
     annyang.start();
   }
 
-  //we want to add Dates to your status, so here's a var for inspect
+  //we want to add Dates to your status, so here's a var for it
   var date = new Date();
-  //depending on what you answer, a new status will appear!
+  //how you feelin status - depending on what you answer, a new status will appear!
   function goodDay () {
     $('#goodStatus').addClass("myStatus");
     $('#goodStatus').html(date + "<br/> Feeling good today!");
@@ -136,8 +177,23 @@ $(document).ready(function () {
     $('#badStatus').html(date + "<br/> Not feeling so hot today!");
   }
   function sadDay () {
-      $('#sadStatus').addClass("myStatus");
-      $('#sadStatus').html(date + "<br/> What a day... don't feel like talking to anyone anymore");
+    $('#sadStatus').addClass("myStatus");
+    $('#sadStatus').html(date + "<br/> What a day... don't feel like talking to anyone anymore");
+  }
+
+  //alright you want to talk about something else, you have 2 options.
+  function talkElse () {
+    $('#fremmyStatus').text("Okay, what do you want to talk about?");
+    $('#fremmyStatus').append('<div id="where">Where I am</div>')
+    $('#fremmyStatus').append('<div id="eat">Probably food</div>')
+  }
+
+  function whereI () {
+    $('#fremmyStatus').text("You're in " + address + " right now. How do you like it?");
+  }
+
+  function foodI () {
+    $('#fremmyStatus').text("You're in " + address + " right now. How do you like it?");
   }
 
 
@@ -146,4 +202,4 @@ $(document).ready(function () {
 // settings for responsivevoice
 function say (text) {
   responsiveVoice.speak(text,voice,voiceParameters);
-}
+};

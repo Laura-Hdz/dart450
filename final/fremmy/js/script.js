@@ -7,6 +7,7 @@ Laura Hernandez
 js file for Fremmy, the worst friend you'll ever have.
 
 **********************************************/
+
 // settings for responsivevoice
 var speechReady = false;
 var voice = 'UK English Female';
@@ -39,7 +40,7 @@ $(document).ready(function () {
     $('#nameButton').on('click',function() {
       var mySavedName = $('#nameInput').val(); // your name is saved in the myName variable
       localStorage.setItem('myName',mySavedName); // your name is saved to the browser
-      console.log(mySavedName);
+      console.log(mySavedName);//just checking to see if it saved correctly
     //Fremmy knows your name now, so it says hi after we set the text to the div "fremmyTalks"
       $('#fremmyTalks').text("Hi " + mySavedName + ", it's nice to meet you!");
         say($('#fremmyTalks').text());
@@ -104,11 +105,45 @@ $(document).ready(function () {
 
 //JS FOR THE DASHBOARD PAGE
 
+  //Fremmy welcomes you once again
+  $('#fremmyStatus').text("Hi again " + myName + ", how are you feeling today? Good? Bad?");
+  say($('#fremmyStatus').text());
+
+  //time to use annyang!
+  if (annyang) {
+    console.log("annyang is a-okay!");
+    // commands (what to say) to Fremmy (annyang)
+    var commands = {
+      'good': goodDay,
+      'bad': badDay,
+      'not talking': sadDay,
+      };
+    // adding the commands
+    annyang.addCommands(commands);
+    // start annyang
+    annyang.start();
+  }
+
+  //we want to add Dates to your status, so here's a var for inspect
+  var date = new Date();
+  //depending on what you answer, a new status will appear!
+  function goodDay () {
+    $('#goodStatus').addClass("myStatus");
+    $('#goodStatus').html(date + "<br/> Feeling good today!");
+  }
+  function badDay () {
+    $('#badStatus').addClass("myStatus");
+    $('#badStatus').html(date + "<br/> Not feeling so hot today!");
+  }
+  function sadDay () {
+      $('#sadStatus').addClass("myStatus");
+      $('#sadStatus').html(date + "<br/> What a day... don't feel like talking to anyone anymore");
+  }
 
 
 });
 
-
+// settings for responsivevoice
 function say (text) {
   responsiveVoice.speak(text,voice,voiceParameters);
 }

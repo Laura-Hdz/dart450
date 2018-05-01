@@ -134,6 +134,7 @@ $(document).ready(function () {
         //linking the new div to go to the dashboard
         $('#dashboard').on('click',function(){
           window.location.href = "html/dashboard.html";
+        });
       }
       //you have to pick one of the two
       else

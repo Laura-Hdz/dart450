@@ -39,3 +39,22 @@ html, body {
   width: 20px;
   height: 20px;
 }
+
+#welcome {
+  position: absolute;
+  top: 40%;
+  width: 40%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%,0);
+}
+
+#welcome p{
+  padding-bottom: 15px;
+}
+
+.headerText {
+  font-size: 30px;
+  display:block;
+  padding-bottom: 10px;
+}

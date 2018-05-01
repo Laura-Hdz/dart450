@@ -135,6 +135,7 @@ $(document).ready(function () {
       'talk about something else': talkElse,
       'where i am': whereI,
       'food': foodI,
+      'friend': friend
       };
     // adding the commands
     annyang.addCommands(commands);
@@ -208,18 +209,21 @@ $(document).ready(function () {
         // Pull out the user's formatted address (a string)
         var address = data.results[0].formatted_address;
         console.log(address);
-
+        //Let's see if you're in Montreal
         if (address.indexOf("Montreal") != -1) {
           $('#fremmyStatus').text("Montreal is great isn't it?");
           say($('#fremmyStatus').text());
+          //If you are, show
           $('#montreal').addClass("myStatus");
           $('#montreal').html(date + "<br/> Currently in Montreal and it's great!");
+          $('#keepTalking').text("Want to talk to a friend? Just say the word!");
         }
         else {
           $('#fremmyStatus').text("Are you on vacation?");
           say($('#fremmyStatus').text());
           $('#away').addClass("myStatus");
           $('#away').html(date + "<br/> Not exactly in Montreal right now. Let me know if you need me!");
+          $('#keepTalking').text("Want to talk to a friend? Just say the word!");
         }
       };
   }
@@ -231,7 +235,12 @@ $(document).ready(function () {
     say($('#fremmyStatus').text());
     window.open("https://www.pizzahut.ca/", "_blank");
     $('#order').addClass("myStatus");
-    $('#order').html(date + "<br/> Ordering some food!");
+    $('#order').html(date + "<br/> Ordering some " + myFood + "!");
+    $('#keepTalking').text("Want to talk to a friend? Just say the word!");
+  }
+
+  function friend () {
+    
   }
 
 

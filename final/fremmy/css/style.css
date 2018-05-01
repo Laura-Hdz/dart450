@@ -28,7 +28,7 @@ html, body {
 #nav {
   position: fixed;
   top: 0;
-  width: 400px;
+  width: 300px;
   height: 60px;
   left: 50%;
   transform: translate(-50%,0);
@@ -66,10 +66,9 @@ html, body {
 
 #statusArea {
   position: absolute;
-  top: 0;
+  top: 100px;
   width: 50%;
   left: 50%;
-  padding-top: 100px;
   transform: translate(-50%,0);
 }
 
@@ -98,6 +97,23 @@ html, body {
   padding-top: 5px;
 }
 
-#where {
+#chat {
+  position: absolute;
+  bottom: -490px;
+  right: 5%;
+  width: 35%;
+  height: 500px;
+  background-color: white;
+  box-shadow: 0 0 10px 5px rgba(176, 176, 176, 0.6);
+}
+
+#chattop {
+  padding: 10px;
+  background-color: white;
+  box-shadow: 0 0 5px 3px rgba(176, 176, 176, 0.4);
+}
+
+#start {
+  color: gray;
   cursor: pointer;
 }

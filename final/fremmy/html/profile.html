@@ -34,7 +34,9 @@ This is the HTML for the dashboard and messages page of the project.
 
   <!-- annyang link -->
   <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
-  
+
+  <script type="text/javascript" src="../js/webcam.min.js"></script>
+
   <!-- script file -->
   <script src="../js/script.js"></script>
 
@@ -45,65 +47,16 @@ This is the HTML for the dashboard and messages page of the project.
 <body>
 
 <div id="nav">
-    <a href="#"><img src="../images/dashboard.svg" alt="dashboard"/></a>
-    <a href="/profile.html" target="_blank"><img src="../images/profile.svg" alt="profile"/></a>
+    <a href="/dashboard.html"><img src="../images/dashboard.svg" alt="dashboard"/></a>
+    <a href="#" target="_blank"><img src="../images/profile.svg" alt="profile"/></a>
     <a id="messages" href="#"><img src="../images/message.svg" alt="message"/></a>
 </div>
 
-<div id="statusArea">
-  <div id="fremmyStatus">
-  </div>
-  <div id="goodStatus">
-  </div>
-  <div id="badStatus">
-  </div>
-  <div id="sadStatus">
-  </div>
-  <div id="montreal">
-  </div>
-  <div id="away">
-  </div>
-  <div id="order">
-  </div>
-
-  <div id="keepTalking">
-    Let's talk about something else...
-  </div>
+<div id="my_camera" style="width:320px; height:240px;">
 </div>
+<div id="my_result"></div>
+<div id="snapshot">Take a snap</div>
 
-<div id="chat">
-  <div id="chattop">
-    Chat with someone! <span id="start">Start</span>
-  </div>
-
-  <div id="smith" class="them">
-  </div>
-
-  <div id="me" class="answer">
-    <div id="a1">> Nice to meet you!</div>
-    <div id="a2">> How are you?</div>
-  </div>
-
-  <div id="smithA" class="them">
-  </div>
-
-  <div id="meDoingOk" class="answer">
-    <div id="a3">> Guess I'm doing okay...</div>
-    <div id="a4">> I just ordered some food, so I'm great!</div>
-  </div>
-
-  <div id="meSharingFood" class="answer">
-    <div id="a5">> Sorry man, I don't share food...</div>
-    <div id="a6">> I would if I could!</div>
-  </div>
-
-  <div id="smithLast" class="them">
-  </div>
-</div>
-
-<div id="profile">
-  limk
-</div>
 </body>
 
 </html>

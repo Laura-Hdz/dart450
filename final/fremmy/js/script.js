@@ -355,8 +355,19 @@ $(document).ready(function () {
         //End of this chat
       });
     });
-
   });
+  $('#profile').on('click',function(){
+    window.location.href = "profile.html";
+  });
+
+  Webcam.attach( '#my_camera' );
+    $('#snapshot').on('click', function () {
+        Webcam.snap(function(data_uri) {
+            document.getElementById('my_result').innerHTML = '<img src="'+data_uri+'"/>';
+        });
+        $('#my_camera').hide();
+        $('#snapshot').hide();
+    });
 
 });
 

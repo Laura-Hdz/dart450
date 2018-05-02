@@ -138,3 +138,33 @@ html, body {
   cursor: pointer;
   display: none;
 }
+
+#profile {
+  position: absolute;
+  top: 600px;
+  background-color: red;
+  width: 100px;
+  height: 100px;
+}
+
+/* CAMERA CSS */
+#my_camera {
+  position: relative;
+  top: 120px;
+  margin: 0 auto;
+}
+
+#my_result img {
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  transform: translate(-50%,0);
+  border-radius: 70px;
+}
+#snapshot {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,0);
+  top: 100px;
+}

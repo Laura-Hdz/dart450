@@ -293,9 +293,9 @@ $(document).ready(function () {
     $('#smith').fadeIn();
     //What do you want to say? Let's bring up the answers after a short delay
     $('#me').delay(1000).fadeIn();
-    //if you click on a1...
+    //if you click on a1 (first option)...
     $('#a1').on('click', function () {
-      //it will hide a2 and slightly edit a1
+      //it will hide a2 (second option) and slightly edit a1
       $('#a2').hide();
       $('#a1').text("Nice to meet you!");
       //Smith continues talking
@@ -303,10 +303,30 @@ $(document).ready(function () {
       $('#smithA').text("Nice to meet you too! Heard you were ordering some " + myFood + ", can I have some?");
       //your turn to answer, you have 2 choices again
       $('#meSharingFood').delay(1000).fadeIn();
+      //from your new choices, if you click on a5 (first option)...
+      $('#a5').on('click', function () {
+        //it will hide a6 (second option) and slightly edit a5
+        $('#a6').hide();
+        $('#a5').text("Sorry man, I don't share food...");
+        //Smith continues talking
+        $('#smithLast').fadeIn();
+        $('#smithLast').text("Oh, alright. I guess I'll se ya later then.");
+        //End of this chat
+      });
+      //from your new choices, if you click on a6 (second option)...
+      $('#a6').on('click', function () {
+        //it will hide a5 (second option) and slightly edit a6
+        $('#a5').hide();
+        $('#a6').text("I would if I could!");
+        //Smith continues talking
+        $('#smithLast').fadeIn();
+        $('#smithLast').text("Haha, I Appreciate it! I'm going to follow the example and go order myself some food. See ya!");
+        //End of this chat
+      });
     });
-    //if you click on a2...
+    //if you click on a2 (second option)...
     $('#a2').on('click', function () {
-      //it will hide a1 and slightly edit a2
+      //it will hide a1 (first option) and slightly edit a2
       $('#a1').hide();
       $('#a2').text("How are you?");
       //Smith continues talking
@@ -314,6 +334,26 @@ $(document).ready(function () {
       $('#smithA').text("I'm doing great! How about you?");
       //your turn to answer, you have 2 choices again
       $('#meDoingOk').delay(1000).fadeIn();
+      //from your new choices, if you click on a3 (first option)...
+      $('#a3').on('click', function () {
+        //it will hide a4 (second option) and slightly edit a3
+        $('#a4').hide();
+        $('#a3').text("Guess I'm doing okay...");
+        //Smith continues talking
+        $('#smithLast').fadeIn();
+        $('#smithLast').text("Oh, er... Well, hope you feel better... I'll see ya later!");
+        //End of this chat
+      });
+      //from your new choices, if you click on a4 (second option)...
+      $('#a4').on('click', function () {
+        //it will hide a3 (first option) and slightly edit a4
+        $('#a3').hide();
+        $('#a4').text("I just ordered some food, so I'm great!");
+        $('#smithLast').fadeIn();
+        //Smith continues talking
+        $('#smithLast').text("Damn, I'm jealous. I think I'm gonna go do the same. See ya!");
+        //End of this chat
+      });
     });
 
   });

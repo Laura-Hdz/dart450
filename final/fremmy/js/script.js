@@ -4,7 +4,11 @@ DART 450, Winter 2018
 Fremmy / Final
 Laura Hernandez
 
-js file for Fremmy, the worst friend you'll ever have.
+Complete js file for Fremmy, the worst friend you'll ever have.
+Fremmy uses libraries (responsivevoice and annyang) and the Google geolocation API in order to create a humanized user experience.
+It also uses localStorage in order to remember some of your choices and preferences.
+Fremmy creates your dashboard and profile for you; using if statements, appends, and adding classes in order to populate all the information.
+Fremmy takes into account the Date as well.
 
 **********************************************/
 
@@ -211,38 +215,108 @@ $(document).ready(function () {
         console.log(address);
         //Let's see if you're in Montreal
         if (address.indexOf("Montreal") != -1) {
+          //If you are, Fremmy will talk about how great the city is!
           $('#fremmyStatus').text("Montreal is great isn't it?");
           say($('#fremmyStatus').text());
-          //If you are, show
+          // Have to keep creating statuses of course
           $('#montreal').addClass("myStatus");
           $('#montreal').html(date + "<br/> Currently in Montreal and it's great!");
+          //You're probably getting tired of talking to Fremmy, time to say "friend" and talk to "someone"
           $('#keepTalking').text("Want to talk to a friend? Just say the word!");
         }
         else {
+          //If you aren't exactly in Montreal, Fremmy will ask if you're on vacation (because it can't know that Montreal has a bunch of boroughs)
           $('#fremmyStatus').text("Are you on vacation?");
           say($('#fremmyStatus').text());
+          // Have to keep creating statuses of course
           $('#away').addClass("myStatus");
           $('#away').html(date + "<br/> Not exactly in Montreal right now. Let me know if you need me!");
+          //You're probably getting tired of talking to Fremmy, time to say "friend" and talk to "someone"
           $('#keepTalking').text("Want to talk to a friend? Just say the word!");
         }
       };
   }
-
+  // If you wanted to talk about food
   function foodI () {
+    // going back and getting the answer to one of the first questions regarding food: pizza or lasagna?
     var myFood = localStorage.getItem('myFood');
     console.log(myFood)
+    //Fremmy will ask you to order food, because it's looking out for you
     $('#fremmyStatus').text("You love " + myFood + ", why not order some right now?");
     say($('#fremmyStatus').text());
-    window.open("https://www.pizzahut.ca/", "_blank");
+    //depending on what your choice of food was, Fremmy will open two different sites for you to order from
+    if (myFood === 'pizza'){
+      window.open("https://www.pizzahut.ca/", "_blank");
+    }
+    else {
+      window.open("https://www.grubhub.com/delivery/dish/lasagna", "_blank")
+    }
+    // And of course, we keep creating statuses
     $('#order').addClass("myStatus");
     $('#order').html(date + "<br/> Ordering some " + myFood + "!");
+    //You're probably getting tired of talking to Fremmy, time to say "friend" and talk to "someone"
     $('#keepTalking').text("Want to talk to a friend? Just say the word!");
   }
 
+  // Got tired and want to talk to a friend? Time to open the chat (moving it's position up to unhide it using css)
   function friend () {
-    
+    $('#chat').css({
+      bottom: 0,
+    });
   }
+  // Friend chat can also be opened by clicking on the "chat" icon in the nav (moving it's position up to unhide it using css)
+  $('#messages').on('click', function(){
+    $('#chat').css({
+        bottom: 0,
+      });
+  });
+  //Setting some variables for the conversation answers
+  var answers = [document.getElementById('a1'), document.getElementById('a2'),]
+  var myFood = localStorage.getItem('myFood');
+  console.log(myFood)
 
+  //Start to chat!
+  $('#start').on('click',function () {
+    //the start option disappears and the title of the chat is updated
+    $('#start').fadeToggle();
+    $('#chattop').text("Chatting with Bob Smith! ");
+    //end chat option is added for whenever you're done
+    $('#chattop').append('<span id="end">End</span>');
+    //clicking on it will bring the chat back down
+    $('#end').on('click', function () {
+      $('#chat').css({
+          bottom: -510 + 'px',
+        });
+    });
+    //Mr. Smith starts off the convo!
+    $('#smith').text("Hi " + myName + ", I'm Bob Smith!");
+    $('#smith').fadeIn();
+    //What do you want to say? Let's bring up the answers after a short delay
+    $('#me').delay(1000).fadeIn();
+    //if you click on a1...
+    $('#a1').on('click', function () {
+      //it will hide a2 and slightly edit a1
+      $('#a2').hide();
+      $('#a1').text("Nice to meet you!");
+      //Smith continues talking
+      $('#smithA').fadeIn();
+      $('#smithA').text("Nice to meet you too! Heard you were ordering some " + myFood + ", can I have some?");
+      //your turn to answer, you have 2 choices again
+      $('#meSharingFood').delay(1000).fadeIn();
+    });
+    //if you click on a2...
+    $('#a2').on('click', function () {
+      //it will hide a1 and slightly edit a2
+      $('#a1').hide();
+      $('#a2').text("How are you?");
+      //Smith continues talking
+      $('#smithA').fadeIn();
+      $('#smithA').text("I'm doing great! How about you?");
+      //your turn to answer, you have 2 choices again
+      $('#meDoingOk').delay(1000).fadeIn();
+    });
+
+  });
 
 });
 

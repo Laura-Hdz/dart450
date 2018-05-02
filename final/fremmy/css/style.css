@@ -4,7 +4,7 @@ DART 450, Winter 2018
 Fremmy / Final
 Laura Hernandez
 
-css for final
+Complete CSS for all Fremmy pages, including navigation, index, dashboard, messages and profile.
 
 */
 
@@ -97,12 +97,14 @@ html, body {
   padding-top: 5px;
 }
 
+/* CHAT CSS */
+
 #chat {
   position: absolute;
-  bottom: -490px;
+  bottom: -510px;
   right: 5%;
   width: 35%;
-  height: 500px;
+  height: 450px;
   background-color: white;
   box-shadow: 0 0 10px 5px rgba(176, 176, 176, 0.6);
 }
@@ -115,5 +117,35 @@ html, body {
 
 #start {
   color: gray;
+  cursor: pointer;
+}
+
+#end {
+  color: gray;
+  cursor: pointer;
+}
+
+.chat {
+  color: rgb(5, 181, 165);
+}
+
+.them {
+  padding: 15px;
+  text-align: right;
+  color: rgb(5, 181, 165);
+  display: none;
+}
+
+.answer {
+  padding: 15px;
+  color: rgb(181, 5, 127);
+  cursor: pointer;
+  display: none;
+}
+
+.clear {
+  padding-left: 15px;
+  color: rgb(181, 5, 125);
+  display: none;
   cursor: pointer;
 }

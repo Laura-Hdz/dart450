@@ -28,7 +28,7 @@ html, body {
 #nav {
   position: fixed;
   top: 0;
-  width: 300px;
+  width: auto;
   height: 60px;
   left: 50%;
   transform: translate(-50%,0);
@@ -167,4 +167,14 @@ html, body {
   left: 50%;
   transform: translate(-50%,0);
   top: 100px;
+}
+
+#about {
+  font-size: 30px;
+  position: absolute;
+  top: 420px;
+  left: 50%;
+  text-align: center;
+  width: 50%;
+  transform: translate(-50%,0);
 }

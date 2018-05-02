@@ -6,7 +6,7 @@ Laura Hernandez
 
 Fremmy is a website and experience that criticizes the use of social media and its interference in interpersonal relationships. Fremmy enables and encourages the user to post information about themselves through a “humanized” user-experience. It then uses the information gathered to create a profile for the user and “help" them connect with people who have similar interests or opinions. The name Fremmy came about because it felt fitting to use a catchy phonetic reference to the words friends, enemies and frenemies.
 
-This is the HTML for the dashboard and messages page of the project.
+This is the HTML for the profile page of the project.
 
 ************************************************************************ -->
 
@@ -18,7 +18,7 @@ This is the HTML for the dashboard and messages page of the project.
 
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-  <title>Fremmy - Dashboard</title>
+  <title>Fremmy - Profile</title>
 
   <link rel="stylesheet" type="text/css" href="../css/style.css" />
 
@@ -35,6 +35,7 @@ This is the HTML for the dashboard and messages page of the project.
   <!-- annyang link -->
   <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
 
+  <!-- webcamjs link https://pixlcore.com/read/WebcamJS  -->
   <script type="text/javascript" src="../js/webcam.min.js"></script>
 
   <!-- script file -->
@@ -42,20 +43,22 @@ This is the HTML for the dashboard and messages page of the project.
 
 </head>
 
-<!-- Dashboard & messages page for Fremmy -->
+<!-- Profile page for Fremmy -->
 
 <body>
 
 <div id="nav">
     <a href="/dart450/final/fremmy/html/dashboard.html"><img src="../images/dashboard.svg" alt="dashboard"/></a>
     <a href="#" target="_blank"><img src="../images/profile.svg" alt="profile"/></a>
-    <a id="messages" href="#"><img src="../images/message.svg" alt="message"/></a>
 </div>
 
 <div id="my_camera" style="width:320px; height:240px;">
 </div>
 <div id="my_result"></div>
 <div id="snapshot">Take a snap</div>
+
+<div id="about">
+</div>
 
 </body>
 

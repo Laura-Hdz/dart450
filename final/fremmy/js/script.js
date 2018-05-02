@@ -5,7 +5,7 @@ Fremmy / Final
 Laura Hernandez
 
 Complete js file for Fremmy, the worst friend you'll ever have.
-Fremmy uses libraries (responsivevoice and annyang) and the Google geolocation API in order to create a humanized user experience.
+Fremmy uses libraries (responsivevoice and annyang) and the Google geolocation API in order to create a humanized user experience. It also uses webcamjs to create your profile.
 It also uses localStorage in order to remember some of your choices and preferences.
 Fremmy creates your dashboard and profile for you; using if statements, appends, and adding classes in order to populate all the information.
 Fremmy takes into account the Date as well.
@@ -258,6 +258,8 @@ $(document).ready(function () {
     $('#keepTalking').text("Want to talk to a friend? Just say the word!");
   }
 
+  //JS FOR THE MESSAGING CHAT
+
   // Got tired and want to talk to a friend? Time to open the chat (moving it's position up to unhide it using css)
   function friend () {
     $('#chat').css({
@@ -271,7 +273,6 @@ $(document).ready(function () {
       });
   });
   //Setting some variables for the conversation answers
-  var answers = [document.getElementById('a1'), document.getElementById('a2'),]
   var myFood = localStorage.getItem('myFood');
   console.log(myFood)
 
@@ -356,19 +357,22 @@ $(document).ready(function () {
       });
     });
   });
-  $('#profile').on('click',function(){
-    window.location.href = "profile.html";
-  });
 
-  Webcam.attach( '#my_camera' );
+  //JS FOR THE PROFILE PAGE
+
+  //Allow access to camera to take a picture for your pfile!
+  Webcam.attach('#my_camera');
+    //clicking on snapshot takes the picture and posts it as your pfile pic
     $('#snapshot').on('click', function () {
         Webcam.snap(function(data_uri) {
             document.getElementById('my_result').innerHTML = '<img src="'+data_uri+'"/>';
         });
+        //hide the camera and link since you won't need them anymore
         $('#my_camera').hide();
         $('#snapshot').hide();
     });
-
+    //Now let's add some info to your profile!
+    $('#about').text("Hi there! My name is " + myName +". I'm new here and looking to make some friends. I love " + myFood + " so if you wanna talk about how good it is, I'm all ears.");
 });
 
 // settings for responsivevoice
